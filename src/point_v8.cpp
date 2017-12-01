@@ -1,10 +1,3 @@
-//
-//  point_v8.cpp
-//  addon
-//
-//  Created by Eduard Dudar on 11/30/17.
-//
-
 #include "point_v8.hpp"
 
 PointV8::PointV8(double x, double y) : Point(x, y) {}

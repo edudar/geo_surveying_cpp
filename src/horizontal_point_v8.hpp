@@ -1,10 +1,3 @@
-//
-//  horizontal_point_v8.hpp
-//  addon
-//
-//  Created by Eduard Dudar on 11/30/17.
-//
-
 #ifndef horizontal_point_v8_hpp
 #define horizontal_point_v8_hpp
 
@@ -12,7 +5,7 @@
 #include "angle_v8.hpp"
 
 class HorizontalPointV8 : public HorizontalPoint {
-    
+
 public:
     HorizontalPointV8();
     HorizontalPointV8(HorizontalPointV8* cp);

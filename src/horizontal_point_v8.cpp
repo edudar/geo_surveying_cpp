@@ -1,10 +1,3 @@
-//
-//  horizontal_point_v8.cpp
-//  addon
-//
-//  Created by Eduard Dudar on 11/30/17.
-//
-
 #include "horizontal_point_v8.hpp"
 
 HorizontalPointV8::HorizontalPointV8() : HorizontalPoint() {}

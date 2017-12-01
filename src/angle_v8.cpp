@@ -1,10 +1,3 @@
-//
-//  angle_v8.cpp
-//  addon
-//
-//  Created by Eduard Dudar on 11/30/17.
-//
-
 #include "angle_v8.hpp"
 
 AngleV8::AngleV8(int degree, int minutes, double seconds) : Angle(degree, minutes, seconds) {}
