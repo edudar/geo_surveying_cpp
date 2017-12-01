@@ -6,13 +6,19 @@
 
 static const double EPSILON = 1E-6;
 
-struct Point {
+class Point {
 
+private:
     double x;
     double y;
 
-    explicit Point(double x = 0, double y = 0) : x(x), y(y) {}
+public:
+    explicit Point(double x = 0, double y = 0);
 
+    double get_x();
+    
+    double get_y();
+    
     bool operator==(const Point &other) const;
 
     std::string to_string();

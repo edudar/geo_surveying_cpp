@@ -3,8 +3,8 @@
 
 
 #include <vector>
-#include "angle.h"
-#include "point.h"
+#include "angle.hpp"
+#include "point.hpp"
 
 struct TraversingSolution {
 

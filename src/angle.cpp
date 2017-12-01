@@ -1,11 +1,26 @@
 #include <sstream>
 #include <iomanip>
-#include "angle.h"
+
+#include "angle.hpp"
+
+Angle::Angle(int degree, int minutes, double seconds) : degree(degree), minutes(minutes), seconds(seconds) {}
 
 std::string Angle::to_string() {
     std::stringstream out;
     out << std::fixed << std::setprecision(4) << seconds;
-    return std::to_string(degree) + "˚" + std::to_string(minutes) + "'" + out.str() + "\"";
+    return std::to_string(degree) + "˚" + std::to_string(minutes) + "'" + std::to_string(seconds) + "\"";
+}
+
+int Angle::get_degree() {
+    return degree;
+}
+
+int Angle::get_minutes() {
+    return minutes;
+}
+
+double Angle::get_seconds() {
+    return seconds;
 }
 
 Angle Angle::operator+(const Angle &other) const {

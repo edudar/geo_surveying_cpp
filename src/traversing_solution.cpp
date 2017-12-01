@@ -1,12 +1,8 @@
-#include "traversing_solution.h"
-#include "printer.h"
+#include "traversing_solution.hpp"
+#include "printer.hpp"
 
 std::string TraversingSolution::to_string() {
     StringPrinter p;
-
-    p.println();
-    p.println("===== TRAVERSING =====");
-    p.println();
 
     p.println("Internal Angles:");
     for (auto &internal_angle : internal_angles) {

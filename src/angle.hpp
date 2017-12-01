@@ -4,16 +4,22 @@
 
 #include <string>
 
-struct Angle {
+class Angle {
 
+private:
     int degree;
     int minutes;
     double seconds;
 
-    explicit Angle(int degree = 0, int minutes = 0, double seconds = 0.0) : degree(degree),
-                                                                            minutes(minutes),
-                                                                            seconds(seconds) {}
+public:
+    explicit Angle(int degree = 0, int minutes = 0, double seconds = 0);
 
+    int get_degree();
+    
+    int get_minutes();
+    
+    double get_seconds();
+    
     Angle operator+(const Angle &other) const;
 
     Angle operator-(const Angle &other) const;

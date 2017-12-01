@@ -3,8 +3,8 @@
 
 
 #include <vector>
-#include "three_wire_levelling_solution.h"
-#include "sight_point.h"
+#include "three_wire_levelling_solution.hpp"
+#include "sight_point.hpp"
 
 class ThreeWireLevelling {
 

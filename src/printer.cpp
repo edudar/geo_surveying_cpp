@@ -1,4 +1,4 @@
-#include "printer.h"
+#include "printer.hpp"
 
 StringPrinter::StringPrinter() {
     out = std::stringstream();

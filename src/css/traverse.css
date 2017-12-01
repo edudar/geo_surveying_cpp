@@ -1,0 +1,38 @@
+.container-fluid {
+    padding: 0;
+}
+
+.content {
+    margin-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.input-right {
+    text-align: right;
+}
+
+#points {
+    margin-bottom: 10px;
+    display: none;
+}
+
+.hp_remove {
+    text-decoration: underline;
+    color: #888;
+    cursor: default;
+}
+
+#solution {
+    font-family: monospace;
+    overflow: auto;
+}

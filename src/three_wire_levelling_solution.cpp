@@ -1,5 +1,5 @@
-#include "three_wire_levelling_solution.h"
-#include "printer.h"
+#include "three_wire_levelling_solution.hpp"
+#include "printer.hpp"
 
 std::string ThreeWireLevellingSolution::to_string() {
     StringPrinter p;

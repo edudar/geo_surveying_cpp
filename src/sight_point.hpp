@@ -2,7 +2,7 @@
 #define GEO_SURVEYING_SIGHT_POINT_H
 
 
-#include "sight_height.h"
+#include "sight_height.hpp"
 
 struct SightPoint {
 

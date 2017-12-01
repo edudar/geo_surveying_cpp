@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Geo-Surveying : Traverse</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap-reboot.min.css" />
+  <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap-grid.min.css" />
+  <link rel="stylesheet" href="../css/traverse.css" />
+  <script src="../../node_modules/jquery/dist/jquery.min.js" onload="window.$ = window.jQuery = module.exports;"></script>
+  <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../node_modules/popper.js/dist/popper.min.js"></script>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Geo-Surveying</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="traverse.html">Traverse <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">3-Wire Leveling</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="row content">
+      <div class="col col-md-4">
+        <form>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="a_x">Point A</label>
+              <div class="input-group input-group-sm">
+                <div class="input-group-addon">X</div>
+                <input type="number" class="form-control form-control-sm" id="a_x">
+              </div>
+
+            </div>
+            <div class="form-group col-md-6">
+              <label for="a_y">&nbsp;</label>
+              <div class="input-group input-group-sm">
+                <div class="input-group-addon">Y</div>
+                <input type="number" class="form-control form-control-sm" id="a_y">
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-3">
+              <label for="azimuth_d">Azimuth</label>
+              <div class="input-group input-group-sm">
+                <input type="number" class="form-control form-control-sm" id="azimuth_d">
+                <div class="input-group-addon">˚</div>
+              </div>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="azimuth_m">&nbsp;</label>
+              <div class="input-group input-group-sm">
+                <input type="number" class="form-control form-control-sm" id="azimuth_m">
+                <div class="input-group-addon">''</div>
+              </div>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="azimuth_s">&nbsp;</label>
+              <div class="input-group input-group-sm">
+                <input type="number" class="form-control form-control-sm" id="azimuth_s">
+                <div class="input-group-addon">'</div>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label for="azimuth_d">Horizontal Points</label>
+              <div class="list-group" id="points">
+              </div>
+              <div class="input-group input-group-sm">
+                <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#newPoint" id="np">Add</button>
+              </div>
+            </div>
+          </div>
+        </form>
+        <hr/>
+        <button type="button" class="btn btn-primary" id="solve" disabled="true">Solve</button>
+        <a class="btn btn-light" id="solve" href="index.html">Back</a>
+      </div>
+      <div class="col col-md-8">
+        <pre id="solution"></pre>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="newPoint" tabindex="-1" role="dialog" aria-labelledby="newPointLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">New Horizontal Point</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-row">
+                  <div class="form-group col-md-3">
+                    <label for="azimuth_d">Left</label>
+                    <div class="input-group input-group-sm">
+                      <input type="number" class="form-control form-control-sm input-right" id="azimuth_ld">
+                      <div class="input-group-addon">˚</div>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="azimuth_m">&nbsp;</label>
+                    <div class="input-group input-group-sm">
+                      <input type="number" class="form-control form-control-sm input-right" id="azimuth_lm">
+                      <div class="input-group-addon">''</div>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="azimuth_s">&nbsp;</label>
+                    <div class="input-group input-group-sm">
+                      <input type="number" class="form-control form-control-sm input-right" id="azimuth_ls">
+                      <div class="input-group-addon">'</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-3">
+                    <label for="azimuth_d">Right</label>
+                    <div class="input-group input-group-sm">
+                      <input type="number" class="form-control form-control-sm input-right" id="azimuth_rd">
+                      <div class="input-group-addon">˚</div>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="azimuth_m">&nbsp;</label>
+                    <div class="input-group input-group-sm">
+                      <input type="number" class="form-control form-control-sm input-right" id="azimuth_rm">
+                      <div class="input-group-addon">''</div>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="azimuth_s">&nbsp;</label>
+                    <div class="input-group input-group-sm">
+                      <input type="number" class="form-control form-control-sm input-right" id="azimuth_rs">
+                      <div class="input-group-addon">'</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <label for="azimuth_d">Distance</label>
+                    <div class="input-group input-group-sm">
+                      <input type="number" class="form-control form-control-sm input-right" id="distance_r">
+                      <div class="input-group-addon">ft.</div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" id="newPointClear">Cancel</button>
+              <button type="button" class="btn btn-primary" id="newPointAdd">Add Point</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    require('../js/traverse.js');
+  </script>
+</body>
+
+</html>

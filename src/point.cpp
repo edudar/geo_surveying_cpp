@@ -1,5 +1,16 @@
 #include <cmath>
-#include "point.h"
+#include "point.hpp"
+
+Point::Point(double x, double y) : x(x), y(y) {
+}
+
+double Point::get_x() {
+    return x;
+}
+
+double Point::get_y() {
+    return y;
+}
 
 std::string Point::to_string() {
     return "(" + std::to_string(x) + "," + std::to_string(y) + ")";

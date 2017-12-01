@@ -1,6 +1,6 @@
 #include <numeric>
 #include <cmath>
-#include "three_wire_levelling.h"
+#include "three_wire_levelling.hpp"
 
 static bool are_double_equal(double a, double b) {
     return fabs(a - b) < 1E-6;
