@@ -34,7 +34,6 @@ function createWindow () {
   })
 
   mainWindow.webContents.toggleDevTools();
-  console.log('main loaded');
 }
 
 // This method will be called when Electron has finished
