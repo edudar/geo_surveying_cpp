@@ -1,6 +1,8 @@
 .idea
 bin
 build
+Release
+Debug
 cmake-build-debug
 dist
 geo-surveying-*
