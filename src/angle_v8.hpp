@@ -1,8 +1,6 @@
 #ifndef angle_v8_hpp
 #define angle_v8_hpp
 
-#include <stdio.h>
-
 #include <node.h>
 #include <node_object_wrap.h>
 

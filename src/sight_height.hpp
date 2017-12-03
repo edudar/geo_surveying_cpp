@@ -3,17 +3,21 @@
 
 #include <string>
 
-struct SightHeight {
+class SightHeight {
 
+private:
     double upper;
     double middle;
     double lower;
 
-    explicit SightHeight(double upper = 0.0, double middle = 0.0, double lower = 0.0) : upper(upper),
-                                                                                        middle(middle),
-                                                                                        lower(lower) {}
-
-    std::string to_string();
+public:
+    explicit SightHeight(double upper = 0.0, double middle = 0.0, double lower = 0.0);
+    
+    double get_upper() const;
+    double get_middle() const;
+    double get_lower() const;
+    
+    std::string to_string() const;
 
 };
 

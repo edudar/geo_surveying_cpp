@@ -15,9 +15,8 @@ private:
 public:
     explicit Point(double x = 0, double y = 0);
 
-    double get_x();
-    
-    double get_y();
+    double get_x() const;
+    double get_y() const;
     
     bool operator==(const Point &other) const;
 

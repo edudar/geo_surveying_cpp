@@ -11,15 +11,15 @@ std::string Angle::to_string() {
     return std::to_string(degree) + "˚" + std::to_string(minutes) + "'" + std::to_string(seconds) + "\"";
 }
 
-int Angle::get_degree() {
+int Angle::get_degree() const {
     return degree;
 }
 
-int Angle::get_minutes() {
+int Angle::get_minutes() const {
     return minutes;
 }
 
-double Angle::get_seconds() {
+double Angle::get_seconds() const {
     return seconds;
 }
 

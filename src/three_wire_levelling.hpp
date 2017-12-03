@@ -9,7 +9,7 @@
 class ThreeWireLevelling {
 
 public:
-    ThreeWireLevellingSolution solve(double benchmark, const std::vector<SightPoint> &sight_points);
+    ThreeWireLevellingSolution solve(double benchmark, const std::vector<std::unique_ptr<SightPoint>> &sight_points);
 };
 
 

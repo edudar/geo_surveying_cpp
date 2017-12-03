@@ -8,3 +8,5 @@ dist
 geo-surveying-*
 node_modules
 .DS_Store
+
+*.lock

@@ -4,10 +4,6 @@
 std::string ThreeWireLevellingSolution::to_string() {
     StringPrinter p;
 
-    p.println();
-    p.println("=== 3-WIRE LEVELLING ===");
-    p.println();
-
     p.println("Backsight Heights:");
     for (auto &height : backsight_heights) {
         p.println(height);

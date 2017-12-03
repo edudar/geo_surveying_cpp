@@ -1,8 +1,11 @@
+#define _USE_MATH_DEFINES
+
 #include <numeric>
 #include <cmath>
 #include "traversing.hpp"
 
-TraversingSolution Traverser::solve(Point a, Angle a_azimuth, const std::vector<std::unique_ptr<HorizontalPoint>> &horizontal_points) {
+TraversingSolution Traverser::solve(Point a, Angle a_azimuth,
+                                    const std::vector<std::unique_ptr<HorizontalPoint>> &horizontal_points) {
 
     TraversingSolution ts = TraversingSolution();
 

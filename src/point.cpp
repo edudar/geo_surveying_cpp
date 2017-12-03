@@ -4,11 +4,11 @@
 Point::Point(double x, double y) : x(x), y(y) {
 }
 
-double Point::get_x() {
+double Point::get_x() const {
     return x;
 }
 
-double Point::get_y() {
+double Point::get_y() const {
     return y;
 }
 

@@ -2,6 +2,7 @@
 #define GEO_SURVEYING_TRAVERSING_H
 
 
+#include <memory>
 #include <vector>
 #include "traversing_solution.hpp"
 #include "point.hpp"

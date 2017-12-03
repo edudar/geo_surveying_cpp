@@ -7,7 +7,7 @@
     "scripts": {
         "clean": "node-gyp clean",
         "configure": "node-gyp configure -- -f xcode",
-        "install": "node-gyp build --target=7.9.0 --arch=x64 --dist-url=https://atom.io/download/electron && mkdir ./Release && cp ./build/Release/addon.node ./Release",
+        "install": "node-gyp build --target=8.9.1 --arch=x64 --dist-url=https://atom.io/download/electron  && mkdir ./Release && cp ./build/Release/addon.node ./Release",
         "start": "electron .",
         "package": "electron-forge package",
         "make": "electron-forge make",
@@ -23,10 +23,11 @@
         "babel-plugin-transform-async-to-generator": "^6.24.1",
         "babel-preset-env": "^1.6.1",
         "babel-preset-react": "^6.24.1",
-        "electron-builder": "^19.47.1",
+        "electron-builder": "19.30.0",
         "electron-forge": "^4.1.5",
         "electron-packager": "^10.1.0",
-        "electron-prebuilt-compile": "1.7.9"
+        "electron-prebuilt-compile": "1.7.9",
+        "electron-rebuild": "^1.6.0"
     },
     "dependencies": {
         "bindings": "^1.2.1",
@@ -70,8 +71,9 @@
     "build": {
         "appId": "com.electron.geo-surveying",
         "files": [
-            "build/**/*.addon",
             "**/*",
+            "build/icon.*",
+            "build/Release/addon.node",
             "!**/.*",
             "!.cache/{,/**/*}",
             "!bin{,/**/*}",

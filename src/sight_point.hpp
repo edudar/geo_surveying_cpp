@@ -4,22 +4,28 @@
 
 #include "sight_height.hpp"
 
-struct SightPoint {
+class SightPoint {
 
+private:
     SightHeight backsight;
     double backsight_distance;
     SightHeight foresight;
     double foresight_distance;
     bool output;
 
+public:
+    SightPoint();
+    SightPoint(SightPoint* cp);
     explicit SightPoint(SightHeight backsight, double backsight_distance, SightHeight foresight,
-                        double foresight_distance, bool output = false) : backsight(backsight),
-                                                                          backsight_distance(backsight_distance),
-                                                                          foresight(foresight),
-                                                                          foresight_distance(foresight_distance),
-                                                                          output(output) {}
+                        double foresight_distance, bool output = false);
+    
+    SightHeight get_backsight() const;
+    double get_backsight_distance() const;
+    SightHeight get_foresight() const;
+    double get_foresight_distance() const;
+    bool is_output() const;
 
-    std::string to_string();
+    std::string to_string() const;
 
 };
 
