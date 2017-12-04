@@ -53,14 +53,14 @@ HorizontalCurveSolution HorizontalCurve::solve(Angle _intersection_angle,
 
     hcs.curve_data.emplace_back(hcs.pc, 0.0, Angle(), Angle());
     for (int i = start_station.to_decimal(), j = 0; i < hcs.pt.to_decimal(); i += station_distance, j++) {
-        CurveData cd = CurveData::create(hcs.curve_radius, hcs.pc, hcs.deflection_per_foot,
-                                         Station::from_decimal(i), hcs.curve_data[j]);
-        hcs.curve_data.push_back(cd);
+        HorizontalCurveData hcd = HorizontalCurveData::create(hcs.curve_radius, hcs.pc, hcs.deflection_per_foot,
+                                                              Station::from_decimal(i), hcs.curve_data[j]);
+        hcs.curve_data.push_back(hcd);
     }
 
-    CurveData cd_pt = CurveData::create(hcs.curve_radius, hcs.pc, hcs.deflection_per_foot,
-                                        hcs.pt, hcs.curve_data[hcs.curve_data.size() - 1]);
-    hcs.curve_data.push_back(cd_pt);
+    HorizontalCurveData hcd_pt = HorizontalCurveData::create(hcs.curve_radius, hcs.pc, hcs.deflection_per_foot,
+                                                             hcs.pt, hcs.curve_data[hcs.curve_data.size() - 1]);
+    hcs.curve_data.push_back(hcd_pt);
 
     return hcs;
 }

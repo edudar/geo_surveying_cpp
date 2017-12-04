@@ -41,6 +41,6 @@ Station Station::from_decimal(double decimal) {
 
 std::string Station::to_string() {
     std::stringstream ft_s;
-    ft_s << std::fixed << std::setprecision(2) << ft;
+    ft_s << std::setfill('0') << std::setw(5) << std::fixed << std::setprecision(2)  << ft;
     return std::to_string(st) + "+" + ft_s.str();
 }

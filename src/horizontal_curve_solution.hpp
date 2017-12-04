@@ -4,7 +4,7 @@
 #include <vector>
 
 #include "angle.hpp"
-#include "curve_data.hpp"
+#include "horizontal_curve_data.hpp"
 #include "station.hpp"
 
 struct HorizontalCurveSolution {
@@ -20,7 +20,7 @@ struct HorizontalCurveSolution {
     Station pc;                // PC = PI - T
     Station pt;                // PT = PC + L
     Angle deflection_per_foot; // DC/FT = (∆/2) / L
-    std::vector<CurveData> curve_data;
+    std::vector<HorizontalCurveData> curve_data;
     
     std::string to_string();
 };

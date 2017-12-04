@@ -34,13 +34,13 @@ std::string HorizontalCurveSolution::to_string() {
     p.println();
     p.println("Curve Data: ");
     for (auto &cd : curve_data) {
-        p.print("Station: ");
+        p.print("- Station: ");
         p.println(cd.get_station().to_string());
-        p.print("Chord: ");
+        p.print("  Chord: ");
         p.println(cd.get_chord());
-        p.print("Deflection Increment: ");
+        p.print("  Deflection Increment: ");
         p.println(cd.get_deflection_increment().to_string());
-        p.print("Deflection Angle: ");
+        p.print("  Deflection Angle: ");
         p.println(cd.get_deflection_angle().to_string());
         p.println();
     }
