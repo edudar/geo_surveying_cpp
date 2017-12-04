@@ -20,14 +20,15 @@ public:
     
     Angle operator+(const Angle &other) const;
     Angle operator-(const Angle &other) const;
-    Angle operator*(int scalar) const;
-    Angle operator/(int scalar) const;
+    Angle operator*(double scalar) const;
+    Angle operator/(double scalar) const;
     bool operator<(const Angle &other) const;
 
     double to_seconds() const;
-    Angle from_seconds(const double &seconds) const;
+    static Angle from_seconds(double seconds);
 
     double to_decimal() const;
+    static Angle from_decimal(double decimal);
 
     std::string to_string();
 

@@ -17,8 +17,15 @@ public:
     void println();
 
     void println(double d);
-
+    void print(double d);
+    
     void println(bool b);
+    void print(bool d);
+
+    template<typename T>
+    void print(T t) {
+        out << t;
+    }
 
     template<typename T>
     void println(T t) {
